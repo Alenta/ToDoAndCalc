@@ -12,7 +12,7 @@ function display(val) {
 }
 
 function checkKey(val) {
-  if (val === "+" || val === "-" || val === "/" || val === "*" || val === ".") {
+  if (val === "+" || val === "-" || val === "/" || val === "*") {
     addOperator(val);
   } //Else if key is "="
   else if (val === "=" && numberEntered) {
@@ -22,7 +22,9 @@ function checkKey(val) {
   } else enterNumber(val);
 }
 function enterNumber(val) {
-  currentNumber += val;
+  if (val === "0" && currentNumber === "") currentNumber = "0.";
+  //Fix this... Should enter a 0. when needed
+  else currentNumber += val;
   document.getElementById("result").value += val; //Immidiately write number to display
   numberEntered = true;
 }
@@ -88,4 +90,14 @@ function clearAndCarryOver() {
   index = 0;
   currentNumber = document.getElementById("result").value;
   numberEntered = true;
+}
+
+function hideCalculator() {
+  console.log("Hiding");
+  document.getElementById("calculator").hidden = true;
+}
+
+function displayCalculator() {
+  console.log("Showing");
+  document.getElementById("calculator").hidden = false;
 }

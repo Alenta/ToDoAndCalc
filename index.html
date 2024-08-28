@@ -10,7 +10,26 @@
 
   <body>
     <header><h1>Test Page</h1></header>
-    <table id="kalkulator">
+
+    <table id="sidebar">
+      <tr>
+        <td>
+          <button class="sidebarButton" onclick="displayCalculator()">
+            Calculator
+          </button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <button class="sidebarButton" onclick="hideCalculator()">
+            Todo List
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <table id="calculator">
       <div>
         <tr>
           <td colspan="4"><input type="text" id="result" /></td>
