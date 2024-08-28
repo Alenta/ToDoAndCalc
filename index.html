@@ -13,18 +13,23 @@
     <table id="kalkulator">
       <div>
         <tr>
-          <td colspan="3"><input type="text" id="result" /></td>
+          <td colspan="4"><input type="text" id="result" /></td>
         </tr>
+      </div>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
         <td>
           <input
             id="CLEAR"
             type="button"
-            value="CLR"
+            value="C"
             onclick="checkKey('CLR')"
             onkeydown="myFunction(event)"
           />
         </td>
-      </div>
+      </tr>
 
       <tr>
         <td>
@@ -37,13 +42,7 @@
           <input type="button" value="3" onclick="checkKey('3')" />
         </td>
         <td>
-          <input
-            id="div"
-            class="keyFunc"
-            type="button"
-            value="/"
-            onclick="checkKey('/')"
-          />
+          <input id="div" type="button" value="/" onclick="checkKey('/')" />
         </td>
       </tr>
       <tr>
