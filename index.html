@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalcAndToDo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <header><h1>Test Page</h1></header>
+    <table id="kalkulator">
+      <div>
+        <tr>
+          <td colspan="3"><input type="text" id="result" /></td>
+        </tr>
+        <td>
+          <input
+            id="CLEAR"
+            type="button"
+            value="CLR"
+            onclick="checkKey('CLR')"
+            onkeydown="myFunction(event)"
+          />
+        </td>
+      </div>
+
+      <tr>
+        <td>
+          <input type="button" value="1" onclick="checkKey('1')" />
+        </td>
+        <td>
+          <input type="button" value="2" onclick="checkKey('2')" />
+        </td>
+        <td>
+          <input type="button" value="3" onclick="checkKey('3')" />
+        </td>
+        <td>
+          <input
+            id="div"
+            class="keyFunc"
+            type="button"
+            value="/"
+            onclick="checkKey('/')"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="4" onclick="checkKey('4')" />
+        </td>
+        <td>
+          <input type="button" value="5" onclick="checkKey('5')" />
+        </td>
+        <td>
+          <input type="button" value="6" onclick="checkKey('6')" />
+        </td>
+        <td>
+          <input id="mult" type="button" value="*" onclick="checkKey('*')" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="7" onclick="checkKey('7')" />
+        </td>
+        <td>
+          <input type="button" value="8" onclick="checkKey('8')" />
+        </td>
+        <td>
+          <input type="button" value="9" onclick="checkKey('9')" />
+        </td>
+        <td>
+          <input id="min" type="button" value="-" onclick="checkKey('-')" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="0" onclick="checkKey('0')" />
+        </td>
+        <td>
+          <input id="point" type="button" value="." onclick="checkKey('.')" />
+        </td>
+
+        <!-- solve function call function solve to evaluate value -->
+        <td><input id="equals" type="button" value="=" onclick="solve()" /></td>
+
+        <td>
+          <input id="plus" type="button" value="+" onclick="checkKey('+')" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
