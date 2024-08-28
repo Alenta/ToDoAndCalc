@@ -24,14 +24,11 @@ function checkKey(val) {
 function enterNumber(val) {
   currentNumber += val;
   document.getElementById("result").value += val; //Immidiately write number to display
-  //currentNumber = document.getElementById("result").value;
-  //This is wrong! FIXME. This recursively adds the entire math problem to the numbers array.
   numberEntered = true;
 }
 function addOperator(val) {
   if (!numberEntered) return;
   numberEntered = false;
-  ///We are done adding the first number
   numbers.push(currentNumber);
   currentNumber = "";
   operators.push(val);
@@ -67,6 +64,7 @@ function solve() {
   if (solvestep < numbers.length) {
     document.getElementById("result").value = tempResult;
   } else console.log("Couldn't get to the end of array");
+  clearAndCarryOver();
 }
 
 //Clear display
@@ -83,11 +81,11 @@ function clr() {
 
 function clearAndCarryOver() {
   //Reset everything exept display
-  numbers.length = 1;
+  numbers.length = 0;
   operators.length = 0;
   tempResult = 0;
-  result = document.getElementById("result").value;
+  result = 0;
   index = 0;
-  currentNumber = result;
+  currentNumber = document.getElementById("result").value;
   numberEntered = true;
 }
