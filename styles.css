@@ -94,6 +94,10 @@ input[type="text"] {
   background-color: rgb(51, 227, 16);
 }
 
+#todoList {
+  display: none;
+}
+
 #plus,
 #min,
 #div,

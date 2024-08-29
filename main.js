@@ -40,9 +40,7 @@ function addOperator(val) {
 function solve() {
   numbers.push(currentNumber);
   let solvestep;
-  console.log("Solving...");
   for (let i = 0; i < numbers.length; i++) {
-    console.log("Mathing: " + numbers[i] + " " + operators[i]);
     solvestep = i;
     if (i < operators - 1) {
       console.log("Operator out of bounds");
@@ -82,7 +80,7 @@ function clr() {
 }
 
 function clearAndCarryOver() {
-  //Reset everything exept display
+  //Reset everything exept display, displayvalue carries over to currentnumber
   numbers.length = 0;
   operators.length = 0;
   tempResult = 0;
@@ -94,10 +92,10 @@ function clearAndCarryOver() {
 
 function hideCalculator() {
   console.log("Hiding");
-  document.getElementById("calculator").hidden = true;
+  document.getElementById("calculator").style.display = "none";
 }
 
 function displayCalculator() {
   console.log("Showing");
-  document.getElementById("calculator").hidden = false;
+  document.getElementById("calculator").style.display = "table";
 }
